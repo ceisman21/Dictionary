@@ -1,4 +1,10 @@
 import java.lang.IndexOutOfBoundsException;
+/*
+By: Cooper Eisman and Jim Fahey
+Created: 10/01/20
+Edited: 10/21/20
+Purpose: The ArrayList creates an ArrayList using the Nodes Class.
+ */
 public class ArrayList<T>{
 
     private T obj;
@@ -9,16 +15,12 @@ public class ArrayList<T>{
     public ArrayList() {
         firstNode = new Nodes();
         lastNode = firstNode;
-        length = 1;
+        length = 0;
     }
 
     public boolean add(T data) {
         try {
-            Nodes temp = new Nodes();
-            temp.setObj(data);
-            lastNode.setChild(temp);
-            lastNode = temp;
-            length++;
+            add(length, data);
             return true;
         }
         catch(Exception e){
@@ -29,29 +31,14 @@ public class ArrayList<T>{
     public void add(int i, T data) {
         Nodes temp = new Nodes();
         temp.setObj(data);
-        Nodes running = firstNode;
-        Nodes counting = firstNode;
         if(i <= 0){
-            firstNode.setParent(temp);
             firstNode = temp;
-            length++;
-        }
-        if(i >= length){
-            lastNode.setChild(temp);
             lastNode = temp;
             length++;
         }
-        else{
-            for(int j = 1; j < i; j++){
-                running = running.getChild();
-            }
-            for(int j = 1; j < i+1; j++){
-                counting = counting.getChild();
-            }
-            running.setChild(temp);
-            counting.setParent(temp);
-            temp.setParent(running);
-            temp.setChild(counting);
+        else {
+            lastNode.setChild(temp);
+            lastNode = temp;
             length++;
         }
     }
@@ -96,6 +83,14 @@ public class ArrayList<T>{
             }
             return tempNode.getObj();
         }
+    }
+    public int find(Object o) {
+        for(int x = 0;x < length; x++) {
+            if(get(x).equals(o)) {
+                return x;
+            }
+        }
+        return -1;
     }
 
     public void set(int i, T data) {

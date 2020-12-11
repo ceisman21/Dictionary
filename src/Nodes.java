@@ -1,8 +1,8 @@
 /*
-Jim Fahey
-9/28/20
-10/1/20
-This is a node data structure class. Everything is tested in main.
+By: Jim Fahey
+Created: 9/28/20
+Edited: 10/1/20
+Purpose: This is a node data structure class. Everything is tested in main.
  */
 public class Nodes<T> {
     private T obj;
