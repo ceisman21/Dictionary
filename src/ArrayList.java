@@ -2,7 +2,7 @@ import java.lang.IndexOutOfBoundsException;
 /*
 By: Cooper Eisman and Jim Fahey
 Created: 10/01/20
-Edited: 10/21/20
+Edited: 12/10/20
 Purpose: The ArrayList creates an ArrayList using the Nodes Class.
  */
 public class ArrayList<T>{

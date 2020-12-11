@@ -1,3 +1,10 @@
+/*
+By: Cooper Eisman
+Created: 12/08/2020
+Edited: 12/10/2020
+Purpose: Uses two Collected Lists to create a Key-Cal dictionary
+ */
+
 import java.util.*;
 
 public class Dictionary<E,T> {

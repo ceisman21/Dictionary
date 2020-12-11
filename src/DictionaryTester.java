@@ -1,3 +1,10 @@
+/*
+By: Cooper Eisman
+Created: 12/08/2020
+Edited: 12/10/2020
+Purpose: Tests dictionary class
+ */
+
 import java.util.Scanner;
 
 public class DictionaryTester {
